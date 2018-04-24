@@ -13,5 +13,8 @@ matrix:
     - php: 5.3
       dist: precise
 
+before_install:
+  composer install -n
+
 script:
   - phpunit
