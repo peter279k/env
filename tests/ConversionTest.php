@@ -42,7 +42,7 @@ class ConversionTest extends TestCase
 
         putenv('FOO=123');
 
-        $this->assertSame(123, env('FOO'));
+        $this->assertSame(123, \Env\env('FOO'));
 
         //Switch to $_ENV
         Env::$options |= Env::USE_ENV_ARRAY;
@@ -51,11 +51,11 @@ class ConversionTest extends TestCase
 
         $_ENV['FOO'] = 456;
 
-        $this->assertSame(456, env('FOO'));
+        $this->assertSame(456, \Env\env('FOO'));
         
         //Switch to getenv again
         Env::$options ^= Env::USE_ENV_ARRAY;
 
-        $this->assertSame(123, env('FOO'));
+        $this->assertSame(123, \Env\env('FOO'));
     }
 }
