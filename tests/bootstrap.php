@@ -2,4 +2,4 @@
 
 error_reporting(E_ALL);
 
-include_once dirname(dirname(__FILE__)).'/src/Env.php';
+include_once __DIR__.'/../vendor/autoload.php';

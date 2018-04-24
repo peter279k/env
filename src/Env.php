@@ -1,5 +1,7 @@
 <?php
 
+namespace Env;
+
 class Env
 {
     const CONVERT_BOOL = 1;
@@ -19,12 +21,6 @@ class Env
      */
     public static function init()
     {
-        if (function_exists('env')) {
-            return false;
-        }
-
-        include_once dirname(__FILE__).'/env_function.php';
-
         return true;
     }
 
